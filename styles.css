@@ -87,6 +87,15 @@ a {
   text-align: right;
 }
 
+.topbar > * {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  background: var(--navy);
+  box-shadow: 0 0 0 0.35rem var(--navy);
+  white-space: nowrap;
+}
+
 .topbar a {
   width: fit-content;
   text-decoration-thickness: 1px;
@@ -623,7 +632,9 @@ a:focus-visible {
 
 @media (max-width: 560px) {
   .topbar {
-    gap: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
     padding-inline: 0.8rem;
     font-size: clamp(0.5rem, 2.4vw, 0.62rem);
     letter-spacing: 0.04em;
